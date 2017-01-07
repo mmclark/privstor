@@ -19,4 +19,12 @@ if __name__ == "__main__":
                 "forget to activate a virtual environment?"
             )
         raise
+
+    # Check private storage and create directory if necessary
+    from django.conf import settings
+    print('private storage location: {}'.format(settings.PRIVATE_STORAGE_ROOT))
+    if not os.path.isdir(settings.PRIVATE_STORAGE_ROOT):
+        os.mkdir(settings.PRIVATE_STORAGE_ROOT)
+        print("private storage directory created")
+
     execute_from_command_line(sys.argv)

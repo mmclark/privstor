@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'private_storage',
+
     'meetings',
 ]
 
@@ -120,3 +122,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# Private Storage Configuration
+PRIVATE_STORAGE_ROOT = os.path.join(BASE_DIR, 'private_storage')
+PRIVATE_STORAGE_AUTH_FUNCTION = 'private_storage.permissions.allow_staff'
