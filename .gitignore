@@ -1,0 +1,6 @@
+*~
+*.pyc
+*.pyo
+tags
+.vscode
+/db.sqlite3
