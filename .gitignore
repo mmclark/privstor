@@ -5,3 +5,4 @@ tags
 .vscode
 /db.sqlite3
 /private_storage
+initenv.sh
