@@ -8,7 +8,7 @@ class Meeting(models.Model):
     meeting_date = models.DateField()
     start_time = models.TimeField()
     description = models.TextField(blank=True)
-    agenda = PrivateFileField(upload_to='meetings')
+    agenda = PrivateFileField("Agenda", upload_to='meetings')
 
 
     
